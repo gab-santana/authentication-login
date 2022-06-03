@@ -5,7 +5,8 @@ class UserController {
 
   async create(req, res) {
     const { name, email, username, password, phone } = req.body;
-    const passwordCrypt = hash(password,10,function(err, hash){});
+    const passwordCrypt = await hash(password,10);
+    console.log(passwordCrypt);
     
     const user = await User.create({
       name,
