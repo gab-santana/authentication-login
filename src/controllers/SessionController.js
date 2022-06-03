@@ -1,6 +1,6 @@
-import { sign } from 'jsonwebtoken'
-import User from '../schemas/User'
-import { compare } from 'bcryptjs'
+import { sign } from 'jsonwebtoken';
+import User from '../schemas/User';
+import { compare } from 'bcryptjs';
 
 class SessionController {
   async create(req, res) {
